@@ -27,7 +27,7 @@ A **local web dashboard** that, given my GitHub identity, shows two live lists d
 ### Backend HTTP API
 | Endpoint | Returns / Body | Purpose |
 |---|---|---|
-| `GET /api/items` | `{ generatedAt: ISO8601, viewer: string, toReview: ReviewItem[], toAddress: AddressItem[], rateLimit: { remaining, resetAt } }` | The whole dashboard state |
+| `GET /api/items` | `{ generatedAt: ISO8601, viewer: string, toReview: ReviewItem[], toAddress: AddressItem[], rateLimit: { remaining, resetAt }, error?: "no_token" \| "rate_limited" \| "network" \| null }` | The whole dashboard state |
 | `POST /api/snooze` | `{ key: string, until: ISO8601 \| null }` → `204` | Snooze/dismiss an item (or clear with `null`) |
 | `GET /api/health` | `{ ok: boolean, tokenPresent: boolean, viewer?: string }` | Startup/diagnostics |
 
