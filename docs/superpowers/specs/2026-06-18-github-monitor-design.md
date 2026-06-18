@@ -58,6 +58,7 @@ type AddressItem = {
   yourTurnCount: number;  // unresolved threads whose last comment author != viewer
   threads: AddressThread[];
   snoozedUntil: string | null;
+  ageDays: number;        // derived from createdAt (for S8 sort)
 };
 
 type AddressThread = {
