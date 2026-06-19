@@ -1,0 +1,12 @@
+:root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+body { margin: 0; padding: 1rem; }
+.topbar { display: flex; gap: 1rem; align-items: center; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.card { border: 1px solid #8884; border-radius: 8px; padding: 0.75rem; margin: 0.5rem 0; }
+.card header { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.badge { font-size: 0.75rem; background: #8882; border-radius: 4px; padding: 0 0.35rem; }
+.badge.danger { background: #d33a; color: #fff; }
+.threads { list-style: none; padding-left: 0; }
+.thread.your-turn { border-left: 3px solid #d33; padding-left: 0.5rem; }
+.snippet { font-size: 0.85rem; opacity: 0.8; margin: 0.2rem 0; }
+.count, .age, .who { font-size: 0.8rem; opacity: 0.7; }
