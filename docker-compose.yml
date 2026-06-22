@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      # Optional overrides:
+      # - PORT=8787
+      # - GHM_DATA_DIR=/data
+    volumes:
+      # Persist snooze state across container restarts
+      - ./data:/app/.data
